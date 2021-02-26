@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox prefHeight="480" prefWidth="720" spacing="8.0" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="productPage"
+      fx:controller="fi.abo.pvp20.grupp5.pointofsale.admin_client.ui.controllers.ProductPageComponentController">
+    <children>
+        <Label fx:id="nameLabel" styleClass="title" text="Name"/>
+        <Label fx:id="barcodeLabel" text="Barcode"/>
+        <Label fx:id="offerLabel" text="Special offer"/>
+        <Label fx:id="vatLabel" text="Vat"/>
+        <HBox alignment="CENTER_LEFT" spacing="8.0">
+            <children>
+                <Label text="Price"/>
+                <TextField fx:id="priceField" promptText="0.00"/>
+                <Button fx:id="updatePriceButton" mnemonicParsing="false" text="Update"/>
+            </children>
+        </HBox>
+        <Label fx:id="keywordsLabel" text="Keywords"/>
+    </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+    </padding>
+</VBox>

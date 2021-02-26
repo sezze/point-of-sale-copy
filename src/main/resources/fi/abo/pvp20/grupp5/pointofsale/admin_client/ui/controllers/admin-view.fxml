@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="480" prefWidth="720" stylesheets="/styles/ui.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.abo.pvp20.grupp5.pointofsale.admin_client.ui.controllers.AdminViewController">
+    <children>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+            <tabs>
+                <Tab closable="false" text="Products">
+                    <content>
+                        <fx:include source="products-tab.fxml" />
+                    </content>
+                </Tab>
+
+                <Tab closable="false" text="Special offers">
+                    <content>
+                        <fx:include source="special-offers-tab.fxml" />
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Sales figures">
+                    <content>
+                        <fx:include source="sales-figures-tab.fxml" />
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Customers">
+                    <content>
+                        <fx:include source="customers-tab.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

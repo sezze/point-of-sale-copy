@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox stylesheets="/styles/ui.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="fi.abo.pvp20.grupp5.pointofsale.cashier_client.ui.controllers.CashierViewController">
+    <children>
+        <HBox prefHeight="502.0" prefWidth="751.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox minWidth="-Infinity" prefWidth="270.0" spacing="8.0">
+                    <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                    </padding>
+                    <children>
+                        <HBox spacing="8.0">
+                            <children>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                       text="Status" HBox.hgrow="ALWAYS">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="clearSaleButton" mnemonicParsing="false" text="Clear"/>
+                                <Button fx:id="shelfButton" mnemonicParsing="false" text="Shelf"/>
+                            </children>
+                        </HBox>
+                        <Separator prefWidth="200.0"/>
+                        <Label fx:id="bonusCardLabel" text="No bonus card"/>
+                        <Label fx:id="itemCountLabel" text="10 items"/>
+                        <Label fx:id="remainingLabel" text="Remaining: 100.00 €">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="totalLabel" text="Total: 100.00 €">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <Separator prefWidth="200.0"/>
+                        <Label fx:id="paidInCashLabel" text="Paid in cash: 0.00 €"/>
+                        <Label fx:id="returnLabel" text="Return: 0.00 €"/>
+                        <VBox alignment="BOTTOM_LEFT" spacing="8.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label fx:id="cashInputError" styleClass="error-label"
+                                       text="You entered an invalid cash amount!"/>
+                                <HBox spacing="4.0">
+                                    <children>
+                                        <TextField fx:id="cashInput" promptText="0.00" HBox.hgrow="ALWAYS"/>
+                                        <Button fx:id="addCashButton" minWidth="-Infinity" mnemonicParsing="false"
+                                                text="Add cash"/>
+                                    </children>
+                                </HBox>
+                                <Button fx:id="openCashBoxButton" maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false" text="Open Cash Box"/>
+                                <HBox spacing="4.0">
+                                    <children>
+                                        <Button fx:id="readCardButton" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" text="Read Card" HBox.hgrow="ALWAYS"/>
+                                        <Button fx:id="abortButton" mnemonicParsing="false" text="Abort"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <TabPane fx:id="tabPane" HBox.hgrow="ALWAYS">
+                    <tabs>
+                        <Tab closable="false" text="Sale">
+                            <content>
+                                <fx:include fx:id="saleTab" source="sale-tab.fxml"/>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="Product Catalog">
+                            <content>
+                                <fx:include fx:id="catalogTab" source="catalog-tab.fxml"/>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </HBox>
+    </children>
+</VBox>

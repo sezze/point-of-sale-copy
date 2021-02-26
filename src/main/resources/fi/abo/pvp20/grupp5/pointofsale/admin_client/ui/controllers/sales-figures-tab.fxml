@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="480" prefWidth="720" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="fi.abo.pvp20.grupp5.pointofsale.admin_client.ui.controllers.SalesFiguresTabController">
+    <children>
+        <VBox spacing="8.0">
+            <children>
+                <HBox spacing="16.0">
+                    <children>
+                        <VBox fillWidth="false" prefWidth="200.0" spacing="4.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Time period"/>
+                                <HBox spacing="8.0">
+                                    <children>
+                                        <DatePicker fx:id="fromDatePicker" promptText="From"/>
+                                        <DatePicker fx:id="toDatePicker" promptText="To"/>
+                                    </children>
+                                </HBox>
+                                <Label text="Product barcode (Optional)"/>
+                                <TextField fx:id="barcodeField"/>
+                            </children>
+                        </VBox>
+                        <VBox fillWidth="false" prefWidth="200.0" spacing="4.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <CheckBox fx:id="filterByAge" text="Filter by age" />
+                                <HBox spacing="8.0">
+                                    <children>
+                                        <TextField fx:id="fromAgeField" promptText="Min"/>
+                                        <TextField fx:id="toAgeField" promptText="Max"/>
+                                    </children>
+                                </HBox>
+                                <Label text="Sex"/>
+                                <ChoiceBox fx:id="sexChoiceBox" prefWidth="120.0"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <Button fx:id="filterButton" mnemonicParsing="false" text="Apply filters"/>
+                <Separator prefWidth="200.0"/>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="16.0">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Most sold products"/>
+                                <ListView fx:id="mostSoldProducts" prefHeight="200.0" prefWidth="200.0"/>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Least sold products"/>
+                                <ListView fx:id="leastSoldProducts" prefHeight="200.0" prefWidth="200.0"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+            </padding>
+        </VBox>
+    </children>
+</VBox>

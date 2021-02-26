@@ -1,0 +1,43 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <module name="point-of-sale" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="fi.abo.pvp20.grupp5.pointofsale.server.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="fi.abo.pvp20.grupp5.pointofsale.server.ServerApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <additionalParameters>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="spring.main.web-application-type" />
+        <option name="value" value="servlet" />
+      </param>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="server.port" />
+        <option name="value" value="9010" />
+      </param>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="spring.datasource.url" />
+        <option name="value" value="jdbc:h2:./databases" />
+      </param>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="spring.datasource.driver-class-name" />
+        <option name="value" value="org.h2.Driver" />
+      </param>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="spring.jpa.hibernate.ddl-auto" />
+        <option name="value" value="update" />
+      </param>
+    </additionalParameters>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

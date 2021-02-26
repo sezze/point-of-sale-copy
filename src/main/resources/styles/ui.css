@@ -1,0 +1,67 @@
+* {
+    -shadow-color: rgba(0, 0, 0, 0.25);
+
+    -fx-background: white;
+    -fx-control-inner-background: white; /* Inside text fields */
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-wrap-text: true;
+}
+
+.button {
+    -fx-background-color: #f6f6f6;
+    -fx-effect: dropshadow(three-pass-box, -shadow-color, 1, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, -shadow-color, 2, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #eeeeee;
+    -fx-effect: innershadow(three-pass-box, -shadow-color, 1, 0, 0, 1);
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: black;
+}
+
+.title {
+    -fx-font-size: 16px;
+}
+
+.list-view {
+    -fx-focus-color: transparent;
+}
+
+.app-status {
+    -fx-background-color: gray;
+    -fx-padding: 4px, 8px;
+}
+
+.app-status .label {
+    -fx-max-width: 99999px;
+    -fx-text-fill: white;
+}
+
+.app-status .button {
+    -fx-padding: 0;
+    -fx-pref-width: 16px;
+    -fx-pref-height: 16px;
+}
+
+
+.app-status.app-status-info {
+    -fx-background-color: #00b7ff;
+}
+
+.app-status.app-status-error {
+    -fx-background-color: #ff0048;
+}
+
+.hgrow {
+    -fx-max-width: 99999px;
+}

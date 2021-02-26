@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" stylesheets="/styles/customer-view.css" prefHeight="268.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.abo.pvp20.grupp5.pointofsale.cashier_client.ui.controllers.CustomerViewController">
+   <children>
+      <Label fx:id="label" text="Welcome!" wrapText="true"/>
+   </children>
+</VBox>
